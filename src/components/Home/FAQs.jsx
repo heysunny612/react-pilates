@@ -1,7 +1,7 @@
 import SectionHead from './SectionHead';
 import { FaQuestion } from 'react-icons/fa';
 import { faqs } from '../../data';
-import FAQ from './Faq';
+import FAQ from './FAQ';
 
 export default function FAQs() {
   return (
