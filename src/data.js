@@ -12,25 +12,25 @@ export const programs = [
     id: 1,
     title: '척추질환',
     desc: '한쪽으로 휘어져있는 척추라인이 모든 척추질환의 근원! 일자로 곧게 정렬되면서 전반적인 체형의 균형감 UP! UP!',
-    path: '/programs',
+    path: '/plans',
   },
   {
     id: 2,
     title: '근력강화',
     desc: '몸의 복부부위 안정, 신체 전체의 균형을 추구하여 전신 근육의 균형적 발달, 스트레칭 능력과 혈액순환을 가져올 수 있는 프로그램!',
-    path: '/programs',
+    path: '/plans',
   },
   {
     id: 3,
     title: '체형관리 & 자세교정',
     desc: '인바디 측정 결과 및 일주일마다 찍는 BEFORE & AFTER 사진으로 전반적인 신체 상태와 체형문제까지 정확하게 살펴볼 수 있는 프로그램',
-    path: '/programs',
+    path: '/plans',
   },
   {
     id: 4,
     title: '청소년 성장프로그램',
     desc: '어머님~아버님~ 우리 아이 성장 걱정하지마세요! RR 필라테스가 도와드리겠습니다. 아이들에게도 부담되지 않는 필라테스 프로그램',
-    path: '/programs',
+    path: '/plans',
   },
 ];
 

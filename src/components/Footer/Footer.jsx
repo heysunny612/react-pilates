@@ -41,7 +41,7 @@ export default function Footer() {
         </article>
         <article className='footer-links'>
           <h4>Site Map</h4>
-          <Link to='/'>About</Link>
+          <Link to='/about'>About</Link>
           <Link to='/plans'>Plans</Link>
           <Link to='/trainers'>Trainers</Link>
           <Link to='/gallery'>Gallery</Link>
