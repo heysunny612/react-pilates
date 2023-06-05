@@ -51,6 +51,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   position: relative;
 }
 
@@ -207,7 +208,7 @@
   width: 5rem;
   height: 5rem;
   position: absolute;
-  top: -2.5rem;
+  top: -2rem;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -228,13 +229,14 @@
 }
 
 .card.reviews-review p.name {
-  font-size: 13px;
+  margin-top: 1rem;
+  font-size: 0.8rem;
   color: var(--color-gray);
 }
 
 .card.reviews-review p.name b {
   display: block;
-  font-size: 15px;
+  font-size: 1rem;
 }
 
 .reviews-btns {
@@ -255,4 +257,84 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* 미디어쿼리 (medium and small screens)*/
+@media screen and (max-width: 1600px) {
+  .main-banner-image > div {
+    left: -30%;
+    width: 20rem;
+    height: 20rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  /*Main Banner*/
+
+  .main-banner {
+    width: fit-content;
+    height: fit-content;
+    padding: 12rem 0 6rem;
+  }
+  .banner-container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .main-banner-right {
+    margin: 0;
+    margin-top: 5rem;
+    background-color: red;
+  }
+  .main-banner-image {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .main-banner-image > div {
+    display: none;
+  }
+
+  /*Main Programs*/
+  .programs-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /*Main values*/
+  .values-container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  .values-image {
+    height: 40vh;
+  }
+  .values-image img {
+    height: 100%;
+  }
+
+  /*Main FAQs*/
+  .faqs-wrpper {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /*Main Review*/
+
+  .card.reviews-review {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 738px) {
+  /*Main Programs*/
+  .programs-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  /*Main Programs*/
+  .values-container {
+    grid-template-columns: 1fr;
+  }
+  /*Main values*/
+  .values-wrpper {
+    grid-template-columns: 1fr;
+  }
 }

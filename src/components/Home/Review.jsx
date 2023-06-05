@@ -1,7 +1,7 @@
 import Card from './Card';
 import { reviews } from '../../data';
 import SectionHead from './SectionHead';
-import { FaCrown } from 'react-icons/fa';
+import { MdOutlineReviews } from 'react-icons/md';
 import { useState } from 'react';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
@@ -27,7 +27,11 @@ export default function Review() {
   return (
     <section className='reviews'>
       <div className='container reviews-container'>
-        <SectionHead title='Reviews' icon={<FaCrown />} className='center' />
+        <SectionHead
+          title='Reviews'
+          icon={<MdOutlineReviews />}
+          className='center'
+        />
         <Card cardInfo={review} className='reviews-review' />
         <div className='reviews-btns'>
           <button onClick={handlePrev}>

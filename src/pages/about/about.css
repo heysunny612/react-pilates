@@ -1,0 +1,33 @@
+.about-container {
+  display: flex;
+  align-items: center;
+  column-gap: 10%;
+  margin-bottom: 4rem;
+}
+
+.about-img {
+  flex: 1 1 40%;
+  overflow: hidden;
+  transition: var(--transition);
+  width: 100%;
+  border-radius: 50%;
+}
+
+.about-content {
+  flex: 1 1 50%;
+}
+.about-content h2 {
+  margin-bottom: 2rem;
+}
+.about-content p {
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .about-container {
+    flex-direction: column;
+  }
+  .about-img:first-child {
+    margin-bottom: 2rem;
+  }
+}

@@ -1,0 +1,29 @@
+.plns-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.plns-container p.name {
+  margin: 0.8rem 0;
+  color: var(--color-primary);
+  font-size: 1.5rem;
+}
+
+.plns-container p {
+  line-height: 3;
+}
+.plns-container .price {
+  margin-top: 1.5rem;
+  padding: 0;
+}
+.plns-container .disabled {
+  color: var(--color-gray);
+  text-decoration: line-through;
+}
+
+@media screen and (max-width: 1024px) {
+  .plns-container {
+    grid-template-columns: 1fr;
+  }
+}

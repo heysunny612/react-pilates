@@ -33,12 +33,17 @@ body {
   color: var(--color-black);
   overflow-x: hidden;
   line-height: 1.7;
+  font-size: 1.1rem;
 }
 
 .container {
   width: var(--container-width-lg);
   max-width: 1920px;
   margin: 0 auto;
+}
+
+.container.pages {
+  padding: 7rem 0;
 }
 
 h1,
@@ -153,4 +158,64 @@ img {
 
 .card a {
   margin-top: 2.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+  }
+
+  .container.pages {
+    padding: 4rem 0;
+  }
+}
+
+/*---------공통 페이지 비쥬얼---------*/
+.page-visual {
+  margin-top: 5rem;
+  width: 100%;
+  height: 20rem;
+  overflow: hidden;
+  border-bottom: 2px solid #f2f2f2;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.visual-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  opacity: 0.5;
+}
+
+.visual-content {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  width: 45%;
+  z-index: 5;
+  color: #fff;
+  opacity: 0.7;
+}
+
+.visual-content h2 {
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 1024px) {
+  .visual-content {
+    width: 70%;
+  }
+
+  .visual-content p {
+    font-size: 0.9rem;
+  }
 }

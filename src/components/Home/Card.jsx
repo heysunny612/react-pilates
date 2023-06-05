@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
-import { AiFillCaretRight } from 'react-icons/ai';
 
 export default function ProgramsCard({
-  cardInfo: { id, icon, title, info, path, avatar, name, job },
+  cardInfo: { id, icon, title, desc, path, avatar, name, job, price, features },
   className,
 }) {
   return (
@@ -14,16 +13,24 @@ export default function ProgramsCard({
       )}
       {icon && <span>{icon}</span>}
       <h4>{avatar ? `"${title}"` : title}</h4>
-      <small>{info}</small>
+      <small>{desc}</small>
       {name && (
         <p className='name'>
           <b>{name} </b>
           {job}
         </p>
       )}
+
+      {features &&
+        features.map(({ feature, available }, idx) => (
+          <p key={idx} className={!available ? 'disabled' : ''}>
+            {feature}
+          </p>
+        ))}
+      {price && <p className='price btn'>{price}</p>}
       {path && (
         <Link to={path} className='btn sm'>
-          Learn More <AiFillCaretRight />
+          Learn More
         </Link>
       )}
     </article>

@@ -1,0 +1,25 @@
+.trainers-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.trainer-image img {
+  height: 30rem;
+  border-radius: 3rem;
+}
+.trainer {
+  text-align: center;
+}
+
+.trainer h3 {
+  margin: 2rem 0;
+  color: var(--color-primary);
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .trainers-container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,91 @@
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  cursor: pointer;
+}
+
+.gallery-container article {
+  border: 1rem solid transparent;
+  transition: var(--transition);
+}
+
+.gallery-container article img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-container article:hover {
+  border-color: var(--color-primary);
+}
+
+.modal-box {
+  position: fixed;
+  width: 60%;
+  top: 50%;
+  left: 50%;
+  background-color: red;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+}
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  opacity: 0.5;
+  z-index: 888;
+}
+.modal-buttons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modal-buttons button {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--color-primary);
+  cursor: pointer;
+}
+.modal-buttons svg {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+.modal-buttons button:hover {
+  background-color: var(--color-secondary);
+}
+
+.modal-buttons button.prev {
+  left: -4rem;
+}
+.modal-buttons button.next {
+  right: -4rem;
+}
+.modal-buttons button.close {
+  background-color: transparent;
+  border-radius: 0;
+  height: 2rem;
+  right: 1rem;
+  top: -1rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .gallery-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gallery-container {
+    grid-template-columns: 1fr;
+  }
+}
